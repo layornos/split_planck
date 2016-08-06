@@ -742,15 +742,15 @@ F 3 "" H 6300 6200 50  0000 C CNN
 $EndComp
 Text Label 5950 6200 2    60   ~ 0
 DATA
-Text Label 11850 3200 0    60   ~ 0
-ROW0
 Text Label 11850 2100 0    60   ~ 0
+ROW0
+Text Label 11850 2300 0    60   ~ 0
 ROW1
-Text Label 11850 2000 0    60   ~ 0
+Text Label 11850 2400 0    60   ~ 0
 ROW2
-Text Label 11850 1700 0    60   ~ 0
+Text Label 11850 2500 0    60   ~ 0
 ROW3
-Text Label 11850 1600 0    60   ~ 0
+Text Label 11850 2600 0    60   ~ 0
 ROW4
 $Comp
 L USB_A P1
@@ -793,21 +793,21 @@ Text Label 11150 5850 0    60   ~ 0
 USB_DP
 Text Label 11150 6050 0    60   ~ 0
 USB_DM
-Text Label 11850 2500 0    60   ~ 0
+Text Label 11850 1400 0    60   ~ 0
 COL0
-Text Label 11850 2300 0    60   ~ 0
-COL1
-Text Label 11850 1800 0    60   ~ 0
-COL2
-Text Label 11850 2700 0    60   ~ 0
-COL3
-Text Label 11850 2900 0    60   ~ 0
-COL4
-Text Label 11850 3000 0    60   ~ 0
-COL5
 Text Label 11850 1500 0    60   ~ 0
+COL1
+Text Label 11850 1600 0    60   ~ 0
+COL2
+Text Label 11850 1700 0    60   ~ 0
+COL3
+Text Label 11850 1800 0    60   ~ 0
+COL4
+Text Label 11850 2000 0    60   ~ 0
+COL5
+Text Label 11850 2700 0    60   ~ 0
 DATA
-NoConn ~ 11850 2800
+NoConn ~ 11850 2900
 NoConn ~ 11850 3500
 NoConn ~ 11850 3600
 NoConn ~ 9400 1500
@@ -851,7 +851,7 @@ Text Label 10700 4650 2    60   ~ 0
 RST
 Text Label 11600 4650 0    60   ~ 0
 UVCC
-NoConn ~ 11850 2400
+NoConn ~ 11850 3200
 $Comp
 L CRYSTAL X1
 U 1 1 579E3360
@@ -998,7 +998,6 @@ Text Label 8050 5950 2    60   ~ 0
 P1
 Text Label 11850 3300 0    60   ~ 0
 P1
-NoConn ~ 11850 1400
 $Comp
 L C C3
 U 1 1 57A1AE85
@@ -1054,11 +1053,7 @@ F 3 "" H 8300 5950 60  0000 C CNN
 	1    8300 5950
 	0    1    1    0   
 $EndComp
-NoConn ~ 11850 3700
-NoConn ~ 11850 3800
-NoConn ~ 11850 3900
-NoConn ~ 11850 4000
-NoConn ~ 11850 2600
+NoConn ~ 11850 2800
 Text Label 9400 3700 2    60   ~ 0
 UGND
 Text Label 9400 3800 2    60   ~ 0
@@ -1074,12 +1069,12 @@ UGND
 Text Label 9900 5550 1    60   ~ 0
 UGND
 $Comp
-L C C?
+L C C4
 U 1 1 57A66A41
 P 12800 2250
-F 0 "C?" H 12850 2350 50  0000 L CNN
+F 0 "C4" H 12850 2350 50  0000 L CNN
 F 1 "C" H 12850 2150 50  0000 L CNN
-F 2 "" H 12800 2250 60  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 12800 2250 60  0001 C CNN
 F 3 "" H 12800 2250 60  0000 C CNN
 	1    12800 2250
 	1    0    0    -1  
@@ -1446,12 +1441,12 @@ Connection ~ 12800 2050
 Wire Wire Line
 	15600 1100 14650 1100
 $Comp
-L C C?
+L C C5
 U 1 1 57A67DC1
 P 14850 1300
-F 0 "C?" H 14900 1400 50  0000 L CNN
+F 0 "C5" H 14900 1400 50  0000 L CNN
 F 1 "C" H 14900 1200 50  0000 L CNN
-F 2 "" H 14850 1300 60  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 14850 1300 60  0001 C CNN
 F 3 "" H 14850 1300 60  0000 C CNN
 	1    14850 1300
 	1    0    0    -1  
@@ -1463,12 +1458,12 @@ UGND
 Wire Wire Line
 	15600 2050 14650 2050
 $Comp
-L C C?
+L C C6
 U 1 1 57A683D4
 P 14850 2250
-F 0 "C?" H 14900 2350 50  0000 L CNN
+F 0 "C6" H 14900 2350 50  0000 L CNN
 F 1 "C" H 14900 2150 50  0000 L CNN
-F 2 "" H 14850 2250 60  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 14850 2250 60  0001 C CNN
 F 3 "" H 14850 2250 60  0000 C CNN
 	1    14850 2250
 	1    0    0    -1  
@@ -1484,16 +1479,56 @@ Wire Wire Line
 Text Label 14650 3100 2    60   ~ 0
 UVCC
 $Comp
-L C C?
+L C C7
 U 1 1 57A68C33
 P 14850 3300
-F 0 "C?" H 14900 3400 50  0000 L CNN
+F 0 "C7" H 14900 3400 50  0000 L CNN
 F 1 "C" H 14900 3200 50  0000 L CNN
-F 2 "" H 14850 3300 60  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 14850 3300 60  0001 C CNN
 F 3 "" H 14850 3300 60  0000 C CNN
 	1    14850 3300
 	1    0    0    -1  
 $EndComp
 Text Label 14850 3500 3    60   ~ 0
 UGND
+NoConn ~ 11850 3000
+$Comp
+L CONN_5X2 JTAG1
+U 1 1 57A6DB4E
+P 12950 3800
+F 0 "JTAG1" H 12950 4100 60  0000 C CNN
+F 1 "JTAG" V 12950 3800 50  0000 C CNN
+F 2 "aud:IDC_Header_Straight_10pins" H 12950 3800 60  0001 C CNN
+F 3 "" H 12950 3800 60  0000 C CNN
+	1    12950 3800
+	1    0    0    -1  
+$EndComp
+Text Label 12550 3600 2    60   ~ 0
+TCK
+Text Label 12550 3700 2    60   ~ 0
+TDO
+Text Label 12550 3800 2    60   ~ 0
+TMS
+Text Label 12550 3900 2    60   ~ 0
+UVCC
+Text Label 12550 4000 2    60   ~ 0
+TDI
+Text Label 13350 3600 0    60   ~ 0
+UGND
+Text Label 13350 3700 0    60   ~ 0
+UVCC
+Text Label 13350 3800 0    60   ~ 0
+RST
+Text Label 13350 4000 0    60   ~ 0
+UGND
+Text Label 11850 3700 0    60   ~ 0
+TCK
+Text Label 11850 3800 0    60   ~ 0
+TMS
+Text Label 11850 3900 0    60   ~ 0
+TDO
+Text Label 11850 4000 0    60   ~ 0
+TDI
+NoConn ~ 13350 3900
+Connection ~ 14850 3100
 $EndSCHEMATC
