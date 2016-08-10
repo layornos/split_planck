@@ -1,4 +1,4 @@
-update=03/08/2016 22:49:24
+update=08/08/2016 21:48:18
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 [cvpcb]
 version=1
 NetIExt=net
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=Libs;../keyboard-pcbs-master/libraries;../../ergodoxpcb/ICED - Right/lib;../../ergodoxpcb/ICED - Left/lib;../../ergodoxpcb/ICED - Left/prettylib;../../ergodoxpcb/ICED - Right/prettylib
@@ -62,13 +72,4 @@ LibName30=Libs/teensy
 LibName31=//192.168.1.10/share/eigenesKeyboard/keyboard-pcbs-master/modules/ATMEGA32U4-AU/ATMEGA32U4-AU
 LibName32=ICEDRight
 LibName33=ICEDLeft
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName34=Libs/semi-diode-ST

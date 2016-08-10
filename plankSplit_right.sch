@@ -32,6 +32,7 @@ LIBS:teensy
 LIBS:ATMEGA32U4-AU
 LIBS:ICEDRight
 LIBS:ICEDLeft
+LIBS:semi-diode-ST
 LIBS:plankSplit_right-cache
 EELAYER 25 0
 EELAYER END
@@ -729,19 +730,6 @@ Text Label 8400 3100 0    60   ~ 0
 ROW1
 Text Label 8400 3900 0    60   ~ 0
 ROW0
-$Comp
-L XLR3 K1
-U 1 1 5778432C
-P 6300 6200
-F 0 "K1" H 6450 6450 50  0000 C CNN
-F 1 "XLR3" H 6500 5950 50  0000 C CNN
-F 2 "aud:4pin35mmAudio" H 6300 6200 50  0001 C CNN
-F 3 "" H 6300 6200 50  0000 C CNN
-	1    6300 6200
-	1    0    0    -1  
-$EndComp
-Text Label 5950 6200 2    60   ~ 0
-DATA
 Text Label 11850 2100 0    60   ~ 0
 ROW0
 Text Label 11850 2300 0    60   ~ 0
@@ -758,15 +746,15 @@ U 1 1 5778C3F0
 P 10000 5850
 F 0 "P1" H 10200 5650 50  0000 C CNN
 F 1 "USB_A" H 9950 6050 50  0000 C CNN
-F 2 "footprint:USBMINImod" V 9950 5750 50  0001 C CNN
+F 2 "mmmm:usb-b-mini-female" V 9950 5750 50  0001 C CNN
 F 3 "" V 9950 5750 50  0000 C CNN
 	1    10000 5850
 	0    -1   -1   0   
 $EndComp
 Text Label 9400 1900 2    60   ~ 0
-USB_DP
+D+in
 Text Label 9400 2000 2    60   ~ 0
-USB_DM
+D-in
 $Comp
 L R USB_DM_R1
 U 1 1 5778D912
@@ -790,10 +778,10 @@ F 3 "" H 10750 5850 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 11150 5850 0    60   ~ 0
-USB_DP
+D+out
 Text Label 11150 6050 0    60   ~ 0
-USB_DM
-Text Label 11850 1400 0    60   ~ 0
+D-out
+Text Label 11850 2700 0    60   ~ 0
 COL0
 Text Label 11850 1500 0    60   ~ 0
 COL1
@@ -805,9 +793,6 @@ Text Label 11850 1800 0    60   ~ 0
 COL4
 Text Label 11850 2000 0    60   ~ 0
 COL5
-Text Label 11850 2700 0    60   ~ 0
-DATA
-NoConn ~ 11850 2900
 NoConn ~ 11850 3500
 NoConn ~ 11850 3600
 NoConn ~ 9400 1500
@@ -822,17 +807,12 @@ F 3 "" H 10500 4950 60  0000 C CNN
 	1    10500 4950
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9400 1800
 NoConn ~ 9400 2100
 Text Label 9400 2200 2    60   ~ 0
 UGND
 Text Label 10300 5750 0    60   ~ 0
 UGND
 Text Label 10300 6050 0    60   ~ 0
-UVCC
-Text Label 6300 6550 3    60   ~ 0
-UGND
-Text Label 6650 6200 0    60   ~ 0
 UVCC
 Text Label 9400 2500 2    60   ~ 0
 RST
@@ -869,7 +849,7 @@ U 1 1 579E50B7
 P 13800 4900
 F 0 "C2" H 13850 5000 50  0000 L CNN
 F 1 "C" H 13850 4800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 13800 4900 60  0001 C CNN
+F 2 "Capacitors_SMD:C_0402" H 13800 4900 60  0001 C CNN
 F 3 "" H 13800 4900 60  0000 C CNN
 	1    13800 4900
 	1    0    0    -1  
@@ -880,7 +860,7 @@ U 1 1 579E5E7A
 P 13200 4900
 F 0 "C1" H 13250 5000 50  0000 L CNN
 F 1 "C" H 13250 4800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 13200 4900 60  0001 C CNN
+F 2 "Capacitors_SMD:C_0402" H 13200 4900 60  0001 C CNN
 F 3 "" H 13200 4900 60  0000 C CNN
 	1    13200 4900
 	1    0    0    -1  
@@ -975,11 +955,11 @@ Text Label 3700 6350 2    60   ~ 0
 UVCC
 Text Label 3700 6700 2    60   ~ 0
 UVCC
-Text Label 11850 1100 0    60   ~ 0
+Text Label 11850 2800 0    60   ~ 0
 LED1
-Text Label 11850 1200 0    60   ~ 0
+Text Label 11850 2900 0    60   ~ 0
 LED2
-Text Label 11850 1300 0    60   ~ 0
+Text Label 11850 3000 0    60   ~ 0
 LED3
 $Comp
 L D D34
@@ -1053,7 +1033,6 @@ F 3 "" H 8300 5950 60  0000 C CNN
 	1    8300 5950
 	0    1    1    0   
 $EndComp
-NoConn ~ 11850 2800
 Text Label 9400 3700 2    60   ~ 0
 UGND
 Text Label 9400 3800 2    60   ~ 0
@@ -1436,10 +1415,10 @@ Connection ~ 10900 4650
 Wire Wire Line
 	10000 4950 10300 4950
 Wire Wire Line
-	13550 2050 12600 2050
+	12600 2050 13550 2050
 Connection ~ 12800 2050
 Wire Wire Line
-	15600 1100 14650 1100
+	14650 1100 15600 1100
 $Comp
 L C C5
 U 1 1 57A67DC1
@@ -1456,7 +1435,7 @@ UVCC
 Text Label 14850 1500 3    60   ~ 0
 UGND
 Wire Wire Line
-	15600 2050 14650 2050
+	14650 2050 15600 2050
 $Comp
 L C C6
 U 1 1 57A683D4
@@ -1475,7 +1454,7 @@ UVCC
 Text Label 14850 2450 3    60   ~ 0
 UGND
 Wire Wire Line
-	15600 3100 14650 3100
+	14650 3100 15600 3100
 Text Label 14650 3100 2    60   ~ 0
 UVCC
 $Comp
@@ -1491,7 +1470,6 @@ F 3 "" H 14850 3300 60  0000 C CNN
 $EndComp
 Text Label 14850 3500 3    60   ~ 0
 UGND
-NoConn ~ 11850 3000
 $Comp
 L CONN_5X2 JTAG1
 U 1 1 57A6DB4E
@@ -1531,4 +1509,76 @@ Text Label 11850 4000 0    60   ~ 0
 TDI
 NoConn ~ 13350 3900
 Connection ~ 14850 3100
+$Comp
+L USBLC6-2P6 DZ1
+U 1 1 57A8E24D
+P 15100 5050
+F 0 "DZ1" H 15100 5700 50  0000 C CNN
+F 1 "USBLC6-2P6" H 15100 5600 50  0000 C CNN
+F 2 "mmmm:usblc6-2p6" H 15100 4550 50  0001 C CNN
+F 3 "http://www.st.com/web/en/resource/technical/document/datasheet/CD00050750.pdf" H 15100 4350 50  0001 C CNN
+F 4 "TVS ST USBLC6-2P6" H 15100 4450 50  0001 C CNN "BOM"
+	1    15100 5050
+	0    1    1    0   
+$EndComp
+Text Label 15150 5350 3    60   ~ 0
+D+in
+Text Label 15150 4750 1    60   ~ 0
+D+out
+Text Label 15050 5350 3    60   ~ 0
+D-in
+Text Label 15050 4750 1    60   ~ 0
+D-out
+Text Label 14700 5050 2    60   ~ 0
+UGND
+Text Label 15650 4000 1    60   ~ 0
+VBus
+$Comp
+L C 100nF1
+U 1 1 57A952E7
+P 15650 4200
+F 0 "100nF1" H 15700 4300 50  0000 L CNN
+F 1 "CBUS" H 15700 4100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 15650 4200 60  0001 C CNN
+F 3 "" H 15650 4200 60  0000 C CNN
+	1    15650 4200
+	1    0    0    -1  
+$EndComp
+Text Label 15500 5050 0    60   ~ 0
+VBus
+Text Label 15650 4400 3    60   ~ 0
+UGND
+Text Label 9400 1800 2    60   ~ 0
+VBus
+$Comp
+L CONN_6 RJ11
+U 1 1 57AA3237
+P 8000 6750
+F 0 "RJ11" V 7950 6750 60  0000 C CNN
+F 1 "CONN_6" V 8050 6750 60  0000 C CNN
+F 2 "mmmm:rj11" H 8000 6750 60  0001 C CNN
+F 3 "" H 8000 6750 60  0001 C CNN
+	1    8000 6750
+	1    0    0    -1  
+$EndComp
+Text Label 11850 1100 0    60   ~ 0
+SS
+Text Label 11850 1200 0    60   ~ 0
+SCLK
+Text Label 11850 1300 0    60   ~ 0
+DATA1
+Text Label 11850 1400 0    60   ~ 0
+DATA2
+Text Label 7650 6500 2    60   ~ 0
+SS
+Text Label 7650 6600 2    60   ~ 0
+SCLK
+Text Label 7650 6700 2    60   ~ 0
+DATA1
+Text Label 7650 6800 2    60   ~ 0
+DATA2
+Text Label 7650 6900 2    60   ~ 0
+UVCC
+Text Label 7650 7000 2    60   ~ 0
+UGND
 $EndSCHEMATC
