@@ -1,0 +1,20 @@
+** Drc report for \\192.168.1.10\share\eigenesKeyboard\right\plankSplit_right.kicad_pcb **
+** Created on  **
+
+** Found 2 DRC errors **
+ErrType(19): Pad near pad
+    @ (122.260 mm,18.196 mm): Pad 7 on F.Cu, B.Cu, Internal, Non-copper of USBCONN2
+    @ (122.260 mm,18.196 mm): Pad 7 on F.Cu, B.Cu, Internal, Non-copper of USBCONN1
+ErrType(19): Pad near pad
+    @ (126.660 mm,18.196 mm): Pad 7 on F.Cu, B.Cu, Internal, Non-copper of USBCONN2
+    @ (126.660 mm,18.196 mm): Pad 7 on F.Cu, B.Cu, Internal, Non-copper of USBCONN1
+
+** Found 2 unconnected pads **
+ErrType(2): Unconnected pads
+    @ (132.180 mm,48.518 mm): Pad 1 on F.Cu, B.Cu, Internal of SW4:6 net /ROW4
+    @ (130.910 mm,45.978 mm): Pad 1 on F.Cu, B.Cu, Internal, Non-copper of SW4:6
+ErrType(2): Unconnected pads
+    @ (51.290 mm,22.502 mm): Pad 2 on B.Cu, Non-copper of U1 net /P14_VCC
+    @ (48.690 mm,24.302 mm): Pad 44 on B.Cu, Non-copper of U1
+
+** End of Report **
